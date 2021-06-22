@@ -18,5 +18,5 @@ module.exports = {
   ],
   rules: {
   },
-  ignorePatterns: ['tailwind.config.js'],
+  ignorePatterns: ['tailwind.config.js', 'vite.config.js'],
 };
