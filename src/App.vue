@@ -1,26 +1,29 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-  >
-  <hello-world msg="Hello Vue 3 + Vite" />
+  <section class="min-h-screen pt-16 flex flex-col items-center gap-12">
+    <h1 class="text-2xl">
+      Two-Way Binding for own Components
+    </h1>
+    <labeled-input
+      id="firstname"
+      v-model="firstname"
+      label="Vorname"
+    />
+    <span>Hello {{ firstname || 'Anonymous' }}!</span>
+  </section>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import LabeledInput from './components/LabeledInput.vue';
 
 export default {
-  components: { HelloWorld },
+  name: 'App',
+  components: { LabeledInput },
+  data: () => ({
+    firstname: '',
+  }),
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
