@@ -11,7 +11,7 @@
     <label
       :for="id"
       class="
-        block absolute top-1/2  left-2
+        block absolute top-1/2 left-2
         -translate-y-8 text-xs bg-white px-2
         transition-all
         peer-focus:-translate-y-8 peer-focus:text-xs
